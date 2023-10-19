@@ -17,9 +17,13 @@ Strategy Assessment: After users allocate the budget, the code calculates the si
 The code leverages several Python libraries to create the Streamlit application and perform calculations. 
 
 Streamlit==1.23.1
+
 Plotly==5.9.0
+
 Numpy==1.24.2
+
 Pandas==1.5.3
+
 scikit-learn==1.0.2
 
 # Summary
