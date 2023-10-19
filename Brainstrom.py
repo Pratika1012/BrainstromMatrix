@@ -21,67 +21,67 @@ if 'var' not in st.session_state:
 
 # Ideal matrix
 ideal = pd.DataFrame([
-    [0, 0, 0, 10, 10],
-    [2, 2, 12, 2, 2],
-    [2, 2, 6, 5, 5]
+    [3, 0, 10, 3, 7],
+    [5, 0, 30, 0, 0],
+    [7, 15, 10, 7, 3]
 ])
 aggressive =pd.DataFrame([
-    [10, 0, 0, 10, 10],
-    [4, 10, 12, 8, 2],
-    [2, 2, 10, 7, 5]
+    [0, 2, 3, 15, 7],
+    [5, 0, 35, 0, 0],
+    [5, 18, 2, 5, 3]
 ])
 
 coservative= pd.DataFrame([
-    [9, 5, 2, 10, 10],
-    [2, 2, 19, 2, 2],
-    [2, 2, 6, 5, 5]
+    [1, 0, 15, 5, 0],
+    [4, 0, 35, 0, 0],
+    [15, 0, 20, 5, 0]
 
 ])
 
 # Matrices created by your team
 team_matrices = {
     "team1":pd.DataFrame([
-        [10, 10, 10, 10, 10],
-        [10, 10, 0, 0, 0],
-        [0, 0, 0, 0, 0]
-    ],columns=['Watersports', 'Snowsports', 'Lawnsports', 'Fightsports', 'IndoorSports'], index=['A', 'B', 'C']),
+        [5, 0, 0, 0, 13],
+        [15, 0, 5, 20, 0],
+        [0, 15, 0, 20, 0]
+    ],columns=['Toys Store', 'Craft Beer', 'Indian Sweets', 'Fantasy Land', 'Dating App'], index=['Digital Presence', 'Retail Stores', 'Partnerships']),
 
     "team2":pd.DataFrame([
-        [-1, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0]
-    ],columns=['Watersports', 'Snowsports', 'Lawnsports', 'Fightsports', 'IndoorSports'], index=['AadASAs', 'BdADSDA', 'Cdasdasd']),
+        [1, 3, 10, 1, 0],
+        [3, 5, 40, 4, 0],
+        [2, 12, 15, 4, 0]
+    ],columns=['Toys Store', 'Craft Beer', 'Indian Sweets', 'Fantasy Land', 'Dating App'], index=['Digital Presence', 'Retail Stores', 'Partnerships']),
 
     "team3":pd.DataFrame([
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0]
-    ],columns=['Watersports', 'Snowsports', 'Lawnsports', 'Fightsports', 'IndoorSports'], index=['A', 'B', 'C']),
+        [5, 1, 10, 8, 2],
+        [9, 1, 22, 13, 1],
+        [9, 3, 10, 7, 0]
+    ],columns=['Toys Store', 'Craft Beer', 'Indian Sweets', 'Fantasy Land', 'Dating App'], index=['Digital Presence', 'Retail Stores', 'Partnerships']),
 
 
     "team4":pd.DataFrame([
+        [15, 15, 25, 0, 0],
         [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0]
-    ],columns=['Watersports', 'Snowsports', 'Lawnsports', 'Fightsports', 'IndoorSports'], index=['A', 'B', 'C']),
+        [5, 10, 20, 0, 0]
+    ],columns=['Toys Store', 'Craft Beer', 'Indian Sweets', 'Fantasy Land', 'Dating App'], index=['Digital Presence', 'Retail Stores', 'Partnerships']),
 
     "team5":pd.DataFrame([
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0]
-    ],columns=['Watersports', 'Snowsports', 'Lawnsports', 'Fightsports', 'IndoorSports'], index=['A', 'B', 'C']),
+        [5, 0, 20, 0, 0],
+        [20, 0, 30, 0, 0],
+        [5, 0, 0, 0, 0]
+    ],columns=['Toys Store', 'Craft Beer', 'Indian Sweets', 'Fantasy Land', 'Dating App'], index=['Digital Presence', 'Retail Stores', 'Partnerships']),
 
     "team6":pd.DataFrame([
         [0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0]
-    ],columns=['Watersports', 'Snowsports', 'Lawnsports', 'Fightsports', 'IndoorSports'], index=['A', 'B', 'C']),
+    ],columns=['Toys Store', 'Craft Beer', 'Indian Sweets', 'Fantasy Land', 'Dating App'], index=['Digital Presence', 'Retail Stores', 'Partnerships']),
 
     "team7":pd.DataFrame([
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0]
-    ],columns=['Watersports', 'Snowsports', 'Lawnsports', 'Fightsports', 'IndoorSports'], index=['A', 'B', 'C']),
+        [5, 3, 10, 2, 2],
+        [5, 7, 15, 25, 0],
+        [20, 0, 0, 3, 0]
+    ],columns=['Toys Store', 'Craft Beer', 'Indian Sweets', 'Fantasy Land', 'Dating App'], index=['Digital Presence', 'Retail Stores', 'Partnerships']),
 }
 # st.write(team_matrices['team1'])
 
@@ -123,7 +123,8 @@ st.markdown("""
  """, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center;'>CE 2.0</h1>", unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: center; font-size: 18px;'>Client Experience 2.0: This team has big potential led by one and only Nitish Bhai, invest today</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 20px;'><b>Structured Approaches to Strategic Solutions!</b></p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 18px;'><i>Client Experience 2.0: We are working towards building a repository of key consulting resources to help you improve your client experience from the very first touch point</i></p>", unsafe_allow_html=True)
 
 # if st.session_state.selected_team != 8:
 #     st.header("**Case Study:**")
@@ -185,11 +186,9 @@ elif result:
     st.session_state.selected_team =8
 
 if st.session_state.selected_team != 8:
-    st.header("**Case Study🔍:**")
-    st.write('''Client Experience or Customer Experience it does not matter we are MBA graduates, sab kuch ek hi hai. humko bus pagal banana hai. 
-                Give us anything we will sell it. Pagal banane is our expertise. But today we will learn something important and useful, something which
-                a B.Tech graduate would like to learn.
-                ''')
+    st.markdown("<p style='text-align: left; font-size: 24px;'><b>Case Study🔍: Help an Indian foods & beverages brand in distributing 100 crore in their selected expansion areas</b></p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: left; font-size: 16px;'><b>Background: </b><i>A traditional Indian foods & beverages brand is looking to expand its business offerings and diversify into multiple areas of business. The brand boasts a robust portfolio of classic Indian drinks like Aam Panna, Jaljeera and Aam Ras, alongside Indian snacks such as peanut chikki. With a vision of becoming a leader in the market, it aims to transport consumers back to their childhood through a strategy deeply rooted in themes of nostalgia and innocence.</i></p>", unsafe_allow_html=True)
+
 
 
 
@@ -202,12 +201,9 @@ with col1:
 
     
     if st.session_state.selected_team==0:
-        st.header("Instructions📝:")
-        st.write("**Instruction 1**")
-        st.write("**Instruction 2**")
-        st.write("**Instruction 3**")
-        st.write("**Instruction 4**")
-        st.write("**Instruction 5**")
+        st.markdown("<p style='text-align: left; font-size: 24px;'><b>Instructions📝:</b></p>", unsafe_allow_html=True)
+        st.write("**1. Divide 100 crore into 15 data points, each being a whole number. Make sure the sum does not cross the limit.**")
+        st.write("**2. You have a 20-minute timer; ensure you submit your sheet within that time frame. Any inputs received after the 20-minute limit will not be considered for evaluation**")
 
 
     if st.session_state.selected_team==1:
@@ -310,7 +306,7 @@ with col1:
 with col3: 
     if st.session_state.selected_team!=0 and st.session_state.selected_team!=8:
     
-        if int(100-sumOfMatrix(edited_df)) > 0:
+        if int(100-sumOfMatrix(edited_df)) >= 0:
                 aggre = calculate_similarity(aggressive, edited_df)
                 ideal=calculate_similarity(ideal, edited_df)
                 conser=calculate_similarity(coservative, edited_df)
@@ -551,45 +547,45 @@ if st.session_state.selected_team==8:
         st.write("")
         
 
-        # st.markdown("<h3 style='font-size:24px;'>Team5</h3>",unsafe_allow_html=True)
+        st.markdown("<h3 style='font-size:24px;'>Team5</h3>",unsafe_allow_html=True)
         
-        # temp=st.session_state.var[5]
-        # if temp=="aggre":
-        #     st.write("You are someone who is unconventional and independent in your approach, often taking risks that others might avoid: ")
-        #     st.subheader(round(calculate_similarity(aggressive,st.session_state.edited_matrices["team5"])*100,2))
+        temp=st.session_state.var[5]
+        if temp=="aggre":
+            st.write("You are someone who is unconventional and independent in your approach, often taking risks that others might avoid: ")
+            st.subheader(round(calculate_similarity(aggressive,st.session_state.edited_matrices["team5"])*100,2))
 
-        # if temp=="Balanced":
-        #     st.write("You are someone who conveys a sense of enthusiasm for risk while also exercising conventional approach when required")
-        #     st.subheader(round(calculate_similarity(ideal,st.session_state.edited_matrices["team5"])*100,2))
-        # if temp=="coservative":
-        #     st.write("You are someone who adheres to traditional and established business practices rather than embracing modern or innovative approaches")
-        #     st.subheader(round(calculate_similarity(coservative,st.session_state.edited_matrices["team5"])*100,2))
+        if temp=="Balanced":
+            st.write("You are someone who conveys a sense of enthusiasm for risk while also exercising conventional approach when required")
+            st.subheader(round(calculate_similarity(ideal,st.session_state.edited_matrices["team5"])*100,2))
+        if temp=="coservative":
+            st.write("You are someone who adheres to traditional and established business practices rather than embracing modern or innovative approaches")
+            st.subheader(round(calculate_similarity(coservative,st.session_state.edited_matrices["team5"])*100,2))
 
-        # st.markdown("<h3 style='font-size:24px;'>Team6</h3>",unsafe_allow_html=True)
+        st.markdown("<h3 style='font-size:24px;'>Team6</h3>",unsafe_allow_html=True)
         
-        # temp=st.session_state.var[6]
-        # if temp=="aggre":
-        #     st.write("You are someone who is unconventional and independent in your approach, often taking risks that others might avoid: ")
-        #     st.subheader(round(calculate_similarity(aggressive,st.session_state.edited_matrices["team6"])*100,2))
+        temp=st.session_state.var[6]
+        if temp=="aggre":
+            st.write("You are someone who is unconventional and independent in your approach, often taking risks that others might avoid: ")
+            st.subheader(round(calculate_similarity(aggressive,st.session_state.edited_matrices["team6"])*100,2))
 
-        # if temp=="Balanced":
-        #     st.write("You are someone who conveys a sense of enthusiasm for risk while also exercising conventional approach when required")
-        #     st.subheader(round(calculate_similarity(ideal,st.session_state.edited_matrices["team6"])*100,2))
-        # if temp=="coservative":
-        #     st.write("You are someone who adheres to traditional and established business practices rather than embracing modern or innovative approaches")
-        #     st.subheader(round(calculate_similarity(coservative,st.session_state.edited_matrices["team6"])*100,2))
+        if temp=="Balanced":
+            st.write("You are someone who conveys a sense of enthusiasm for risk while also exercising conventional approach when required")
+            st.subheader(round(calculate_similarity(ideal,st.session_state.edited_matrices["team6"])*100,2))
+        if temp=="coservative":
+            st.write("You are someone who adheres to traditional and established business practices rather than embracing modern or innovative approaches")
+            st.subheader(round(calculate_similarity(coservative,st.session_state.edited_matrices["team6"])*100,2))
 
-        # st.markdown("<h3 style='font-size:24px;'>Team7</h3>",unsafe_allow_html=True)
+        st.markdown("<h3 style='font-size:24px;'>Team7</h3>",unsafe_allow_html=True)
         
-        # temp=st.session_state.var[7]
-        # if temp=="aggre":
-        #     st.write("You are someone who is unconventional and independent in your approach, often taking risks that others might avoid: ")
-        #     st.subheader(round(calculate_similarity(aggressive,st.session_state.edited_matrices["team7"])*100,2))
+        temp=st.session_state.var[7]
+        if temp=="aggre":
+            st.write("You are someone who is unconventional and independent in your approach, often taking risks that others might avoid: ")
+            st.subheader(round(calculate_similarity(aggressive,st.session_state.edited_matrices["team7"])*100,2))
 
-        # if temp=="Balanced":
-        #     st.write("You are someone who conveys a sense of enthusiasm for risk while also exercising conventional approach when required")
-        #     st.subheader(round(calculate_similarity(ideal,st.session_state.edited_matrices["team7"])*100,2))
-        # if temp=="coservative":
-        #     st.write("You are someone who adheres to traditional and established business practices rather than embracing modern or innovative approaches")
-        #     st.subheader(round(calculate_similarity(coservative,st.session_state.edited_matrices["team7"])*100,2))
+        if temp=="Balanced":
+            st.write("You are someone who conveys a sense of enthusiasm for risk while also exercising conventional approach when required")
+            st.subheader(round(calculate_similarity(ideal,st.session_state.edited_matrices["team7"])*100,2))
+        if temp=="coservative":
+            st.write("You are someone who adheres to traditional and established business practices rather than embracing modern or innovative approaches")
+            st.subheader(round(calculate_similarity(coservative,st.session_state.edited_matrices["team7"])*100,2))
         
